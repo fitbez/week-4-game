@@ -26,10 +26,10 @@ ul {
 	text-indent: 20px;
 }
 /* Specfic Elements*/
-div.header, div.gems{
+.header, .gems{
 	background-color: #e0e0eb;
 }
-div.header, div.instructions{
+.header{
 	width: 50%;
 }
 /* Classes */
@@ -50,7 +50,17 @@ div.header, div.instructions{
 	margin: 10px;
 }
 /* IDs */
-#blue{
+#instruction, #panel{
+padding: 2px;
+text-align: center;
+background-color: #e5eecc;
+border: solid 1px #c3c3c3;
+}
+#panel{
+display: none;
+text-align: left;
+}
+/*#blue{
 	color: #3092c7;
 }
 #green{
@@ -61,4 +71,4 @@ div.header, div.instructions{
 }
 #yellow{
 	color: #ffc225;
-}
+}*/

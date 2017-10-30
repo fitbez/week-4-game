@@ -1,8 +1,13 @@
+
 $( document ).ready(function(){
-  var Random=Math.floor(Math.random()*101+19)
-  // Selects a random number to be shown at the start of the game
-  // Number should be should be between 19 - 120
+  // jquery_ slide_toggle
   //
+  $("#instruction").click(function(){
+    $("#panel").slideToggle("slow");
+  });
+  // Selects a random number between 19 - 120 to be shown at the start of the game
+  //
+  var Random=Math.floor(Math.random()*101+19)
   $('#randomNumber').text(Random);
   // Appending random number to the randomNumber id in the html doc
   //
@@ -16,13 +21,7 @@ $( document ).ready(function(){
   var userTotal= 0;
   var wins= 0;
   var losses = 0;
-  // creats an image div
-  // var gifImage =  $(document.createElement('img'))
-  var gifImage =  $(document.createElement('img'));
-             { id: 'gif';
-               src: 'assets/images/giphy.gif';
-               width: 300;
-             }
+
   //  Declaring variables for tallies
 $('#numberWins').text(wins);
 $('#numberLosses').text(losses);
@@ -39,17 +38,13 @@ function reset(){
       $('#finalTotal').text(userTotal);
       }
 //adds the wins to the userTotal
-function yay(){
-// alert("You won!");
-
-  wins++;
+function winer(){
+ wins++;
   $('#numberWins').text(wins);
   reset();
 }
 //addes the losses to the userTotal
 function loser(){
-// alert ("You lose!");
-
   losses++;
   $('#numberLosses').text(losses);
   reset()
@@ -61,13 +56,13 @@ function loser(){
     $('#finalTotal').text(userTotal);
           //sets win/lose conditions
         if (userTotal == Random){
-          yay();
-          // document.getElementById('gif').innerHTML=("You Won!");
+          winer();
+          // lets the player know  wins  with gif image
           $("#gif").html("<img id='theImg' src='assets/images/giphy.gif'/>");
         }
         else if ( userTotal > Random){
           loser();
-          // document.getElementById('gif').innerHTML=("You lose!");
+         // lets the player know losses with gif image
           $("#gif").html("<img id='theImg' src='assets/images/giphy1.gif'/>");
         }
   })
@@ -75,15 +70,15 @@ function loser(){
     userTotal = userTotal + num2;
     console.log("New userTotal= " + userTotal);
     $('#finalTotal').text(userTotal);
+         //sets win/lose conditions
         if (userTotal == Random){
-          yay();
-          // document.getElementById('gif').innerHTML=("You Won!");
+          winer();
+          // lets the player know  wins  with gif image
           $("#gif").html("<img id='theImg' src='assets/images/giphy.gif'/>");
-
         }
         else if ( userTotal > Random){
           loser();
-          // document.getElementById('gif').innerHTML=("You lose!");
+          // lets the player know losses with gif image
           $("#gif").html("<img id='theImg' src='assets/images/giphy1.gif'/>");
         }
   })
@@ -91,33 +86,32 @@ function loser(){
     userTotal = userTotal + num3;
     console.log("New userTotal= " + userTotal);
     $('#finalTotal').text(userTotal);
-//sets win/lose conditions
+        //sets win/lose conditions
           if (userTotal == Random){
-          yay();
-          // document.getElementById('gif').innerHTML=("You Won!");
+          winer();
+          // lets the player know  wins  with gif image
           $("#gif").html("<img id='theImg' src='assets/images/giphy.gif'/>");
         }
         else if ( userTotal > Random){
           loser();
-          // document.getElementById('gif').innerHTML=("You lose!");
+          // lets the player know losses with gif image
           $("#gif").html("<img id='theImg' src='assets/images/giphy1.gif'/>");
-
         }
   })
   $('#four').on ('click', function(){
     userTotal = userTotal + num4;
     console.log("New userTotal= " + userTotal);
     $('#finalTotal').text(userTotal);
-
+         //sets win/lose conditions
           if (userTotal == Random){
-          yay();
-          // document.getElementById('gif').innerHTML=("You Won!");
+          winer();
+        // lets the player know  wins  with gif image
           $("#gif").html("<img id='theImg' src='assets/images/giphy.gif'/>");
 
         }
         else if ( userTotal > Random){
           loser();
-          // document.getElementById('gif').innerHTML=("You lose!");
+        // lets the player know losses with gif image
 
      $("#gif").html("<img id='theImg' src='assets/images/giphy1.gif'/>");
         }
