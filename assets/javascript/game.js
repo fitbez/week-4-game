@@ -50,7 +50,7 @@ function loser(){
   reset()
 }
 //sets up click for crystals
-  $('#one').on ('click', function(){
+  $('#crystalOne').on ('click', function(){
     userTotal = userTotal + num1;
     console.log("New userTotal= " + userTotal);
     $('#finalTotal').text(userTotal);
@@ -66,7 +66,7 @@ function loser(){
           $("#gif").html("<img id='theImg' src='assets/images/giphy1.gif'/>");
         }
   })
-  $('#two').on ('click', function(){
+  $('#crystalTwo').on ('click', function(){
     userTotal = userTotal + num2;
     console.log("New userTotal= " + userTotal);
     $('#finalTotal').text(userTotal);
@@ -82,7 +82,7 @@ function loser(){
           $("#gif").html("<img id='theImg' src='assets/images/giphy1.gif'/>");
         }
   })
-  $('#three').on ('click', function(){
+  $('#crystalThree').on ('click', function(){
     userTotal = userTotal + num3;
     console.log("New userTotal= " + userTotal);
     $('#finalTotal').text(userTotal);
@@ -98,7 +98,7 @@ function loser(){
           $("#gif").html("<img id='theImg' src='assets/images/giphy1.gif'/>");
         }
   })
-  $('#four').on ('click', function(){
+  $('#crystalFour').on ('click', function(){
     userTotal = userTotal + num4;
     console.log("New userTotal= " + userTotal);
     $('#finalTotal').text(userTotal);
